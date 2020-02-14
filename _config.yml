@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Arijeet Baruah"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Arijeet Baruah"
 description              : &description "Gameplay Programmer"
 url                      : https://arijeetbaruah.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Arijeet Baruah"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  bio              : "Gameplay Programmer"
+  location         : "Newcastle Upon Tyne, UK"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  googlescholar    : 
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -94,9 +94,9 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "rishithegamecreator"
   foursquare       :
-  github           : "academicpages"
+  github           : "arijeetbaruah"
   google_plus      :
   keybase          :
   instagram        :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "thegamecreator5"
   vine             :
   weibo            :
   xing             :
