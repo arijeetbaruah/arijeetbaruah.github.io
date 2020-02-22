@@ -37,3 +37,12 @@ Portfolio
 {% for post in site.portfolio %}
   {% include archive-single.html %}
 {% endfor %}
+
+Hobbies
+======
+* Game Development
+*	Anime and Manga
+*	Comics
+*	Dungeons and Dragon
+*	Reading Novels
+
