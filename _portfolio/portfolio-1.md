@@ -1,7 +1,20 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Music Data Analysis"
+excerpt: "Worked as a solo developer. My duties were working in backend (PHP, Symfony) with frontend site code. Eventually, get 2 or 3 frontend and backend developer and took the lead role in the project
+Languages and framework: 
+<ol>
+<li>PHP</li>
+<li>Symfony</li>
+<li>JQuery</li>
+</ol>
+"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+Worked as a solo developer. My duties were working in backend (PHP, Symfony) with frontend site code. Eventually, get 2 or 3 frontend and backend developer and took the lead role in the project
+Languages and framework: 
+<ol>
+<li>PHP</li>
+<li>Symfony</li>
+<li>JQuery</li>
+</ol>
