@@ -32,7 +32,7 @@ Skills
 * GoLang
 * PHP
 
-Portfolio
+Projects
 ======
 {% for post in site.portfolio %}
   {% include archive-single.html %}
