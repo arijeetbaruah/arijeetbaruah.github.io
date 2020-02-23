@@ -21,4 +21,3 @@ I Proficient in
 
 Projects
 ======
-  {% include portfolio.html %}
