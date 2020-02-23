@@ -1,6 +1,6 @@
 ---
 title: "Zombie Shooter"
-excerpt: "Zombie Shooter made using Game Maker 8. <br> <img src='https://arijeetbaruah.github.io/images/zombie1.png'/>
+excerpt: "Zombie Shooter made using Game Maker 8. <br> <img src='https://arijeetbaruah.github.io/images/zombie3.png'/>
 "
 collection: portfolio
 ---
@@ -13,4 +13,4 @@ Languages and framework:
 <li>Game Maker 8</li>
 </ul>
 
-<img src='https://arijeetbaruah.github.io/images/zombie1.png'/>
+<img src='https://arijeetbaruah.github.io/images/zombie3.png'/>
