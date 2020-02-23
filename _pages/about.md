@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Arijeet Baruah | Gameplay Developer"
+title: "About Me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -18,3 +18,7 @@ I Proficient in
 <li>Blender(basic)</li>
 <li>Photoshop</li>
 </ul>
+
+Projects
+======
+  {% include portfolio.html %}
