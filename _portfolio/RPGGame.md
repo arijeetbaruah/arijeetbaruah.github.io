@@ -1,6 +1,6 @@
 ---
 title: "RPG Game"
-excerpt: "RPG Game with multiple Weapons and Spells"
+excerpt: "RPG Game with multiple Weapons and Spells  <br> <img src='https://arijeetbaruah.github.io/images/rpggame.png'/>"
 collection: portfolio
 ---
 
