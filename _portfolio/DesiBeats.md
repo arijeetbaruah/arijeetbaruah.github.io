@@ -1,6 +1,6 @@
 ---
 title: "DesiBeat"
-excerpt: "A rhythm game with Indian Songs <br>"
+excerpt: "A rhythm game with Indian Songs and ball which follows the tune"
 collection: portfolio
 ---
 
