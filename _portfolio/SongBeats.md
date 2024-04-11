@@ -1,6 +1,6 @@
 ---
 title: "Song Beat"
-excerpt: "A rhythm game with Indian Songs <br> <img src='https://play-lh.googleusercontent.com/jgzjyPMu8QKO4-7nr5pRn133pRqwIMC1EJkIVCdzAhGfEw-dXdwQRBitulTYBnH1uQ=w2560-h1440'/>"
+excerpt: "A rhythm game with Indian Songs <br> <img width="160" src='https://play-lh.googleusercontent.com/jgzjyPMu8QKO4-7nr5pRn133pRqwIMC1EJkIVCdzAhGfEw-dXdwQRBitulTYBnH1uQ=w2560-h1440'/>"
 collection: portfolio
 ---
 
