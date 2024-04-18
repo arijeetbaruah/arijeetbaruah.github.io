@@ -1,6 +1,6 @@
 ---
 title: "Champions Ascension"
-excerpt: "Champions Ascension is an Arena RPG where you collect and battle your own squad of brutal gladiators. You will embark on the pulse-pounding story of a gladiator on a blood-soaked rise to glory!"
+excerpt: "Champions Ascension is an Arena RPG where you collect and battle your own squad of brutal gladiators. You will embark on the pulse-pounding story of a gladiator on a blood-soaked rise to glory!<br/><img src='https://images.ctfassets.net/ir6qj64pt374/5njMo81lJt4eMQCXCj4nbH/f5acf34a78eab2912b4215563dcd8730/alopha-web-hero.png'/>"
 collection: portfolio
 ---
 
