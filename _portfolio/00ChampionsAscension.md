@@ -14,4 +14,6 @@ Languages and framework:
 
 Game link: <a href='https://champions.io'>https://champions.io</a>
 
+<video width="320" height="240" controls>
 <source src='https://videos.ctfassets.net/ir6qj64pt374/18c3W6NR03Ja7dnHTnsEqn/efa82638d0409188be0589e874a51ee5/25sec_VER2.mp4'>
+</video>
