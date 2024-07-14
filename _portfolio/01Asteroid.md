@@ -4,7 +4,7 @@ excerpt: "A self-made asteroid game developed using C++ and the Simple and Fast 
 collection: portfolio
 ---
 
-Game link: [<a href='https://champions.io'>https://champions.io</a>](https://github.com/arijeetbaruah/Asteroid)
+Game link: [Github](https://github.com/arijeetbaruah/Asteroid)
 
 This report presents an overview of a self-made asteroid game developed using C++ and the Simple and Fast Multimedia Library (SFML). The game is a personal project designed to demonstrate proficiency in game development and the application of SFML for multimedia and graphics rendering.
 
