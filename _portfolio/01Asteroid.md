@@ -19,10 +19,12 @@ This report presents an overview of a self-made asteroid game developed using C+
     4. yaml-cpp: Used for configuration management, allowing the game to load settings and configurations from YAML files, enhancing flexibility and ease of updates.
  
 <h2>Features</h2>
-    1. Player Controls: Smooth and responsive controls for the spaceship, allowing for movement and shooting.
-    2. Asteroids: Randomly generated asteroids with varying sizes and speeds, providing a dynamic challenge.
-    3. Collision Detection: Accurate collision detection between the spaceship, bullets, and asteroids to ensure a realistic gameplay experience, facilitated by GLM for precise calculations.
-    4. Scoring System: A point-based scoring system that rewards players for destroying asteroids.
-    5. Graphics and Sound: Engaging visuals and sound effects to enhance the gaming experience, all managed using SFML.
-    6. Logging: Efficient logging using spdlog to track game events and assist in debugging.
-    7. Configuration Management: Game settings and configurations are managed using yaml-cpp, enabling easy adjustments and customizations through YAML files.
+    <ol>
+        <li>Player Controls: Smooth and responsive controls for the spaceship, allowing for movement and shooting.</li>
+        <li>Asteroids: Randomly generated asteroids with varying sizes and speeds, providing a dynamic challenge.</li>
+        <li>Collision Detection: Accurate collision detection between the spaceship, bullets, and asteroids to ensure a realistic gameplay experience, facilitated by GLM for precise calculations.</li>
+        <li>Scoring System: A point-based scoring system that rewards players for destroying asteroids.</li>
+        <li>Graphics and Sound: Engaging visuals and sound effects to enhance the gaming experience, all managed using SFML.</li>
+        <li>Logging: Efficient logging using spdlog to track game events and assist in debugging.</li>
+        <li>Configuration Management: Game settings and configurations are managed using yaml-cpp, enabling easy adjustments and customizations through YAML files.</li>
+    </ol>
