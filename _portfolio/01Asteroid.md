@@ -1,6 +1,6 @@
 ---
 title: "Asteroid"
-excerpt: "A self-made asteroid game developed using C++ and the Simple and Fast Multimedia Library (SFML)"
+excerpt: "A self-made asteroid game developed using C++ and the Simple and Fast Multimedia Library (SFML) <img src='https://github.com/arijeetbaruah/arijeetbaruah.github.io/blob/master/images/Astroid%20(3).png?raw=true'/>"
 collection: portfolio
 ---
 
