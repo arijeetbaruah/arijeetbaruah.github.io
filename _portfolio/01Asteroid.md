@@ -1,6 +1,6 @@
 ---
 title: "Asteroid"
-excerpt: "A self-made asteroid game developed using C++ and the Simple and Fast Multimedia Library (SFML) <img src='https://github.com/arijeetbaruah/arijeetbaruah.github.io/blob/master/images/Astroid%20(3).png?raw=true'/>"
+excerpt: "A self-made asteroid game developed using C++ and the Simple and Fast Multimedia Library (SFML)<br/><img src='https://github.com/arijeetbaruah/arijeetbaruah.github.io/blob/master/images/Astroid%20(3).png'/>"
 collection: portfolio
 ---
 
@@ -19,12 +19,15 @@ This report presents an overview of a self-made asteroid game developed using C+
     4. yaml-cpp: Used for configuration management, allowing the game to load settings and configurations from YAML files, enhancing flexibility and ease of updates.
  
 <h2>Features</h2>
-    <ol>
-        <li>Player Controls: Smooth and responsive controls for the spaceship, allowing for movement and shooting.</li>
-        <li>Asteroids: Randomly generated asteroids with varying sizes and speeds, providing a dynamic challenge.</li>
-        <li>Collision Detection: Accurate collision detection between the spaceship, bullets, and asteroids to ensure a realistic gameplay experience, facilitated by GLM for precise calculations.</li>
-        <li>Scoring System: A point-based scoring system that rewards players for destroying asteroids.</li>
-        <li>Graphics and Sound: Engaging visuals and sound effects to enhance the gaming experience, all managed using SFML.</li>
-        <li>Logging: Efficient logging using spdlog to track game events and assist in debugging.</li>
-        <li>Configuration Management: Game settings and configurations are managed using yaml-cpp, enabling easy adjustments and customizations through YAML files.</li>
-    </ol>
+
+<ol>
+    <li>Player Controls: Smooth and responsive controls for the spaceship, allowing for movement and shooting.</li>
+    <li>Asteroids: Randomly generated asteroids with varying sizes and speeds, providing a dynamic challenge.</li>
+    <li>Collision Detection: Accurate collision detection between the spaceship, bullets, and asteroids to ensure a realistic gameplay experience, facilitated by GLM for precise calculations.</li>
+    <li>Scoring System: A point-based scoring system that rewards players for destroying asteroids.</li>
+    <li>Graphics and Sound: Engaging visuals and sound effects to enhance the gaming experience, all managed using SFML.</li>
+    <li>Logging: Efficient logging using spdlog to track game events and assist in debugging.</li>
+    <li>Configuration Management: Game settings and configurations are managed using yaml-cpp, enabling easy adjustments and customizations through YAML files.</li>
+</ol>
+    
+<img src='https://github.com/arijeetbaruah/arijeetbaruah.github.io/blob/master/images/Astroid%20(3).png'/>
