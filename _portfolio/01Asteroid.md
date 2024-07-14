@@ -30,4 +30,4 @@ This report presents an overview of a self-made asteroid game developed using C+
     <li>Configuration Management: Game settings and configurations are managed using yaml-cpp, enabling easy adjustments and customizations through YAML files.</li>
 </ol>
     
-<img src='https://github.com/arijeetbaruah/arijeetbaruah.github.io/blob/master/images/Astroid%20(3).png'/>
+<img src='https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/master/images/Astroid%20(3).png'/>
