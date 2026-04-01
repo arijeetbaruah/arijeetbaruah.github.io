@@ -3,46 +3,6 @@ layout: default
 title: Home
 ---
 
-<!-- Animated canvas bg -->
-<canvas id="bg-canvas"></canvas>
-
-<!-- ═══════════════════════════════════════════════════
-     NAV
-═══════════════════════════════════════════════════ -->
-<nav id="nav">
-  <div class="wrap nav-inner">
-    <a href="#hero" class="nav-logo"><em>// </em>Arijeet Baruah</a>
-
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#skills">skills</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-
-      <!-- Theme toggle -->
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
-
-      <a href="#contact" class="nav-hire">Hire me</a>
-
-      <!-- Mobile hamburger -->
-      <div class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</div>
-
-
 <!-- ═══════════════════════════════════════════════════
      HERO
 ═══════════════════════════════════════════════════ -->
@@ -131,70 +91,15 @@ title: Home
     </div>
 
     <div class="skills-grid">
-
-      <div class="skill-card reveal" data-delay="0">
-        <span class="skill-index">[00]</span>
-        <div class="skill-glyph">&gt;_</div>
-        <div class="skill-name">Unity3D</div>
-        <div class="skill-sub">Primary Engine</div>
-        <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+      {% for skill in site.data.skills.skills %}
+      <div class="skill-card reveal" data-delay="{{ forloop.index }}">
+        <span class="skill-index">[0{{ forloop.index }}]</span>
+        <div class="skill-glyph">{{ skill.icon }}</div>
+        <div class="skill-name">{{ skill.name }}</div>
+        <div class="skill-sub">{{ skill.description }}</div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="{{ skill.points }}"></div></div>
       </div>
-
-      <div class="skill-card reveal" data-delay="1">
-        <span class="skill-index">[01]</span>
-        <div class="skill-glyph">#</div>
-        <div class="skill-name">C#</div>
-        <div class="skill-sub">Gameplay Scripting</div>
-        <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
-      </div>
-
-      <div class="skill-card reveal" data-delay="2">
-        <span class="skill-index">[02]</span>
-        <div class="skill-glyph">++</div>
-        <div class="skill-name">C++</div>
-        <div class="skill-sub">Engine-level / SFML</div>
-        <div class="skill-bar"><div class="skill-fill" data-pct="74"></div></div>
-      </div>
-
-      <div class="skill-card reveal" data-delay="3">
-        <span class="skill-index">[03]</span>
-        <div class="skill-glyph">{ }</div>
-        <div class="skill-name">React / JS</div>
-        <div class="skill-sub">Frontend Tools</div>
-        <div class="skill-bar"><div class="skill-fill" data-pct="66"></div></div>
-      </div>
-
-      <div class="skill-card reveal" data-delay="4">
-        <span class="skill-index">[04]</span>
-        <div class="skill-glyph">Go</div>
-        <div class="skill-name">Golang</div>
-        <div class="skill-sub">Backend Integration</div>
-        <div class="skill-bar"><div class="skill-fill" data-pct="55"></div></div>
-      </div>
-
-      <div class="skill-card reveal" data-delay="5">
-        <span class="skill-index">[05]</span>
-        <div class="skill-glyph">⬡</div>
-        <div class="skill-name">Blender</div>
-        <div class="skill-sub">3D Modelling</div>
-        <div class="skill-bar"><div class="skill-fill" data-pct="40"></div></div>
-      </div>
-
-      <div class="skill-card reveal" data-delay="6">
-        <span class="skill-index">[06]</span>
-        <div class="skill-glyph">☰</div>
-        <div class="skill-name">Photoshop</div>
-        <div class="skill-sub">UI / Asset Work</div>
-        <div class="skill-bar"><div class="skill-fill" data-pct="52"></div></div>
-      </div>
-
-      <div class="skill-card reveal" data-delay="7">
-        <span class="skill-index">[07]</span>
-        <div class="skill-glyph">☕</div>
-        <div class="skill-name">Java / VB.net</div>
-        <div class="skill-sub">Additional Languages</div>
-        <div class="skill-bar"><div class="skill-fill" data-pct="60"></div></div>
-      </div>
+      {% endfor %}
 
     </div>
   </div>
@@ -347,26 +252,34 @@ title: Home
         </div>
 
         <div class="contact-links reveal reveal-delay-2">
-            <a href="mailto:arijeetbaruah@gmail.com" class="contact-link">
+            <a href="mailto:{{site.data.social.email}}" class="contact-link">
             <span class="cl-key">[email]</span>
-            <span class="cl-val">arijeetbaruah@gmail.com</span>
+            <span class="cl-val">{{site.data.social.email}}</span>
             <span class="cl-arrow">→</span>
             </a>
-            <a href="https://www.linkedin.com/in/arijeet-baruah" target="_blank" class="contact-link">
+            <a href="https://www.linkedin.com/in/{{site.data.social.linkedin}}" target="_blank" class="contact-link">
             <span class="cl-key">[linkedin]</span>
-            <span class="cl-val">arijeet-baruah</span>
+            <span class="cl-val">{{site.data.social.linkedin}}</span>
             <span class="cl-arrow">→</span>
             </a>
-            <a href="https://github.com/arijeetbaruah" target="_blank" class="contact-link">
+            <a href="https://github.com/{{site.data.social.github}}" target="_blank" class="contact-link">
             <span class="cl-key">[github]</span>
-            <span class="cl-val">arijeetbaruah</span>
+            <span class="cl-val">{{site.data.social.github}}</span>
             <span class="cl-arrow">→</span>
             </a>
-            <a href="https://twitter.com/thegamecreator5" target="_blank" class="contact-link">
+            {% assign twitter = site.data.social.twitter | strip %}
+            {% if twitter == "-" or twitter == "" %}
+            {% assign show_twitter = 1 %}
+            {% else %}
+            {% assign show_twitter = 0 %}
+            {% endif %}
+            {% if show_twitter == 0 %}
+            <a href="https://twitter.com/{{twitter}}" target="_blank" class="contact-link">
             <span class="cl-key">[twitter]</span>
-            <span class="cl-val">@thegamecreator5</span>
+            <span class="cl-val">@{{twitterr}}</span>
             <span class="cl-arrow">→</span>
             </a>
+            {% endif %}
             <a href="assets/cv/arijeet-baruah-cv.pdf" download class="contact-link">
             <span class="cl-key">[cv]</span>
             <span class="cl-val">Download Resume / CV</span>
@@ -377,22 +290,3 @@ title: Home
         </div>
     </div>
     </section>
-
-    <!-- ═══════════════════════════════════════════════════
-        FOOTER
-    ═══════════════════════════════════════════════════ -->
-    <footer>
-    <div class="wrap">
-        <div class="footer-inner">
-        <div class="footer-copy">© 2025 Arijeet Baruah. Built from scratch — no templates.</div>
-        <ul class="footer-links">
-            <li><a href="https://github.com/arijeetbaruah" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/arijeet-baruah" target="_blank">LinkedIn</a></li>
-            <li><a href="mailto:arijeetbaruah@gmail.com">Email</a></li>
-        </ul>
-        <div class="footer-status">
-            <div class="status-dot"></div>Available for work
-        </div>
-        </div>
-    </div>
-    </footer>

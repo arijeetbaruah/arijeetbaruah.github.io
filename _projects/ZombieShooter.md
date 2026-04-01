@@ -5,8 +5,15 @@ description: "Zombie Shooter made using Game Maker 8."
 image: "https://arijeetbaruah.github.io/images/zombie3.png"
 collection: portfolio
 category: Game
+tags:
+    - Unity3D
+    - C#
+    - PC
+    - Non-Commercial
 ---
 
+<section id="skills" class="section-pad">
+    <div class="wrap">
 Zombie Shooter made using Game Maker 8.
 Languages and framework: 
 
@@ -16,3 +23,5 @@ Languages and framework:
 </ul>
 
 <img src='https://arijeetbaruah.github.io/images/zombie3.png'/>
+</div>
+</section>
