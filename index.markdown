@@ -41,9 +41,8 @@ title: Home
           Available for work
         </div>
         <div class="hero-socials">
-          <a href="https://github.com/arijeetbaruah" target="_blank" class="social-link">GitHub</a>
-          <a href="https://www.linkedin.com/in/arijeet-baruah" target="_blank" class="social-link">LinkedIn</a>
-          <a href="https://twitter.com/thegamecreator5" target="_blank" class="social-link">Twitter</a>
+          <a href="https://github.com/{{site.data.social.github}}" target="_blank" class="social-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/{{site.data.social.linkedin}}" target="_blank" class="social-link">LinkedIn</a>
         </div>
       </div>
 
@@ -175,7 +174,7 @@ title: Home
 
         <div class="about-text reveal">
             <p>
-            I'm a <strong>Gameplay and Tools Programmer</strong> based in Guwahati, Assam.
+            I'm a <strong>Gameplay and Tools Programmer</strong> from Guwahati, Assam.
             I love building the systems that make games feel good — the satisfying crunch
             of combat, the flow of a well-tuned puzzle, the way a character snaps to input.
             </p>
