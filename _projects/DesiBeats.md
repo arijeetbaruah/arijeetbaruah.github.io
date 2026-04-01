@@ -2,7 +2,7 @@
 layout: default
 title: "DesiBeat"
 description: "A rhythm game with Indian Songs and ball which follows the tune"
-image: https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/master/images/desibeats.jpg
+image: https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/master/assets/images/desibeats.jpg
 collection: portfolio
 category: Game
 tags:

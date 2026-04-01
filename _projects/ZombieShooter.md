@@ -2,7 +2,7 @@
 layout: default
 title: "Zombie Shooter"
 description: "Zombie Shooter made using Game Maker 8."
-image: "https://arijeetbaruah.github.io/images/zombie3.png"
+image: "https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/refs/heads/master/assets/images/zombie3.png"
 collection: portfolio
 category: Game
 tags:
@@ -22,6 +22,6 @@ Languages and framework:
 <li>Game Maker 8</li>
 </ul>
 
-<img src='https://arijeetbaruah.github.io/images/zombie3.png'/>
+<img src='https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/refs/heads/master/assets/images/zombie3.png'/>
 </div>
 </section>

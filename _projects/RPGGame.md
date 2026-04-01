@@ -2,7 +2,7 @@
 layout: default
 title: "RPG Game"
 excerpt: "RPG Game with multiple Weapons and Spells"
-image: "https://arijeetbaruah.github.io/images/rpggame.png"
+image: "https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/refs/heads/master/assets/images/rpggame.png"
 collection: portfolio
 category: Game
 tags:
