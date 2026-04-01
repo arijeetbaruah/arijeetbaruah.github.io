@@ -1,0 +1,41 @@
+skills:
+  -
+    name: Unity3D
+    description: Game Engine
+    points: 92
+    icon: <i class="fa-brands fa-unity"></i>
+  -
+    name: Unreal
+    description: Game Engine
+    points: 80
+    icon: <i class="fa-brands fa-unreal-engine"></i>
+  -
+    name: C#
+    description: Gameplay Scription
+    points: 82
+    icon: <i class="icon-custom icon-csharp"></i>
+  -
+    name: C++
+    description: Gameplay Scription / Engine-level
+    points: 92
+    icon: <i class="icon-custom icon-cpp"></i>
+  -
+    name: React/JS
+    description: Frontend web development
+    points: 52
+    icon: <i class="fa-brands fa-react"></i>
+  -
+    name: GoLang
+    description: Backend Integration
+    points: 72
+    icon: <i class="fa-brands fa-golang"></i>
+  -
+    name: OpenGL
+    description: Graphic Engine
+    points: 52
+    icon: <i class="icon-custom icon-opengl"></i>
+  -
+    name: Php
+    description: Backend Integration
+    points: 92
+    icon: <i class="fa-brands fa-php"></i>

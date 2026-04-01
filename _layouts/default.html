@@ -1,31 +1,76 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css"/>
+</head>
+<body>
 
-{% include base_path %}
 
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+<!-- Animated canvas bg -->
+<canvas id="bg-canvas"></canvas>
 
-  <body>
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+<!-- ═══════════════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="/#hero" class="nav-logo"><em>// </em>Arijeet Baruah</a>
 
-    {{ content }}
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="/#skills">skills</a></li>
+        <li><a href="/#projects">projects</a></li>
+        <li><a href="/#about">about</a></li>
+        <li><a href="/#contact">contact</a></li>
+      </ul>
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+      <!-- Theme toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+
+      <a href="#contact" class="nav-hire">Hire me</a>
+
+      <!-- Mobile hamburger -->
+      <div class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
     </div>
+  </div>
+</nav>
 
-    {% include scripts.html %}
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/#skills">Skills</a>
+  <a href="/#projects">Projects</a>
+  <a href="/#about">About</a>
+  <a href="/#contact">Contact</a>
+</div>
 
-  </body>
+  {{ content }}
+
+  
+    <!-- ═══════════════════════════════════════════════════
+        FOOTER
+    ═══════════════════════════════════════════════════ -->
+    <footer>
+    <div class="wrap">
+        <div class="footer-inner">
+        <div class="footer-copy">© 2025 Arijeet Baruah. Built from scratch — no templates.</div>
+        <ul class="footer-links">
+            <li><a href="https://github.com/arijeetbaruah" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/arijeet-baruah" target="_blank">LinkedIn</a></li>
+            <li><a href="mailto:arijeetbaruah@gmail.com">Email</a></li>
+        </ul>
+        <div class="footer-status">
+            <div class="status-dot"></div>Available for work
+        </div>
+        </div>
+    </div>
+    </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
 </html>
