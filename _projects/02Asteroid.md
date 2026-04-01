@@ -2,7 +2,7 @@
 layout: default
 title: "Asteroid"
 description: "A self-made asteroid game developed using C++ and the Simple and Fast Multimedia Library (SFML)"
-image: "https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/master/images/Astroid%20(3).png"
+image: "https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/master/assets/images/Astroid%20(3).png"
 collection: portfolio
 category: Game
 tags:
