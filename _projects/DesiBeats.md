@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: game
 title: "DesiBeat"
 description: "A rhythm game with Indian Songs and ball which follows the tune"
 image: https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/master/assets/images/desibeats.jpg
@@ -10,16 +10,13 @@ tags:
     - C#
     - Mobile
     - Commercial
+link:    
+    text: Google Play
+    url: https://play.google.com/store/apps/details?id=com.hungamagamestudio.desibeats&hl=en_IN&pli=1
+role: Gameplay Programmer
+genre: Match 3 Puzzle
+tech:
+    - Unity
+    - C#
+    - Websockets
 ---
-
-<section id="skills" class="section-pad">
-    <div class="wrap">
-A rhythm game with Indian Songs and ball which follows the tune
-Languages and framework:
-
-<ul>
-<li>Unity3D</li>
-<li>C#</li>
-</ul>
-</div>
-</section>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: game
 title: "Mystery Mansion"
 description: "Social deduction, survival game based on medieval murder mystery game using Unity"
 image: "https://play-lh.googleusercontent.com/CNCHkt21RvRMYcs-1EBZTJu1orxK-ZUE2L7KLYuuQ8d9m-NXUQq358xpKSkskpOJ6so=w526-h296-rw"
@@ -11,17 +11,11 @@ tags:
     - Mobile
     - NFT
     - Commercial
+role: Gameplay Programmer
+genre: NFT social dedection
+tech:
+    - Unity3D
+    - Photon
+    - C#
+    - Odin Inspector
 ---
-
-<section id="skills" class="section-pad">
-    <div class="wrap">
-Social deduction, survival game based on medieval murder mystery game using Unity
-Languages and framework:
-
-<ul>
-<li>Unity3D</li>
-<li>C#</li>
-<li>Odin Inspector</li>
-</ul>
-</div>
-</section>

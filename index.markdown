@@ -124,6 +124,7 @@ title: Home
     <div class="filter-bar reveal">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="game">Games</button>
+      <button class="filter-btn" data-filter="plugin">Plugins</button>
       <button class="filter-btn" data-filter="website">Website</button>
     </div>
 

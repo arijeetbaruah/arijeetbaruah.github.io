@@ -648,6 +648,11 @@ section { position: relative; z-index: 2; }
   color: var(--green);
   border: 1px solid var(--green-border);
 }
+.badge-plugin {
+  background: rgba(0,140,255,0.12);
+  color: var(--green);
+  border: 1px solid var(--green-border);
+}
 .badge-website {
   background: rgba(255,179,71,0.12);
   color: var(--amber);

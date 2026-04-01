@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css"/>
+  <link rel="stylesheet" href="/assets/css/sub-style.css">
 </head>
 <body>
 
@@ -49,7 +49,49 @@
   <a href="/#contact">Contact</a>
 </div>
 
+
+<section class="hero">
+    <img src="{{ page.image }}" class="hero-bg" />
+    <div class="hero-content">
+        <h1>{{ page.title }}</h1>
+        <p class="subtitle">{{ page.description }}</p>
+        {% if page.link %}
+        <a class="cta" href="{{ page.link.url }}" target="_blank">
+            {{ page.link.text }}
+        </a>
+        {% endif %}
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="wrap">
+
+        <!-- QUICK INFO -->
+        <div class="grid-3 info-cards">
+            <div>
+                <h4>Role</h4>
+                <p>{{ page.role }}</p>
+            </div>
+            <div>
+                <h4>Tech</h4>
+                <p>
+                  {% for tech in page.tech %}{% if forloop.index != 1 %}, {% endif %}{{ tech }}{% endfor %}
+                </p>
+            </div>
+            {% if page.genre %}
+            <div>
+                <h4>Genre</h4>
+                <p>{{ page.genre }}</p>
+            </div>
+            {% endif %}
+        </div>
+
   {{ content }}
+  
+
+    </div>
+</section>
+
 
   
     <!-- ═══════════════════════════════════════════════════
