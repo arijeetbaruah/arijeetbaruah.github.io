@@ -5,6 +5,9 @@
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/sub-style.css">
+  {% for customcss in page.custom-css %}
+  <link rel="stylesheet" href="/assets/css/{{customcss}}">
+  {% endfor %}
 </head>
 <body>
 
