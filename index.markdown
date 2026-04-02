@@ -23,7 +23,7 @@ title: Home
         </p>
         <div class="hero-actions reveal" data-delay="4">
           <a href="#projects" class="btn btn-solid">View Projects</a>
-          <a href="assets/cv/arijeet-baruah-cv.pdf" class="btn btn-outline" download>
+          <a href="assets/cv/Arijeet_Baruah_Resume.pdf" class="btn btn-outline" download>
             ↓ Download CV
           </a>
           <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -253,7 +253,7 @@ title: Home
       <span class="cl-arrow">→</span>
       </a>
       {% endif %}
-      <a href="assets/cv/arijeet-baruah-cv.pdf" download class="contact-link">
+      <a href="assets/cv/Arijeet_Baruah_Resume.pdf" download class="contact-link">
       <span class="cl-key">[cv]</span>
       <span class="cl-val">Download Resume / CV</span>
       <span class="cl-arrow">↓</span>
