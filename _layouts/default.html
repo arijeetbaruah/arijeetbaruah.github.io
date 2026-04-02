@@ -2,99 +2,21 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
+  <title>{{ site.title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css"/>
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ site.title }}">
-  <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:image" content="{{ site.url }}/assets/preview.png">
-  <meta property="og:url" content="{{ site.url }}">
-
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-
-  <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/images/favicon.png">
-
-  <meta name="title" content="{{ site.title }}">
-  <meta name="description" content="{{ site.description }}">
-  <meta name="keywords" content="Arijeet Baruah, Gameplay Programmer, Unity Developer, Game Developer, C#, Game Systems, Indie Developer, Portfolio, Game Programming">
-  <meta name="author" content="{{ site.author.name }}">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ site.title }}">
-  <meta name="twitter:description" content="{{ site.description }}">
-  <meta name="twitter:image" content="{{ site.url }}/assets/preview.png">
-
-  <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% include meta.html %}
 </head>
 <body>
 
-
-<!-- Animated canvas bg -->
-<canvas id="bg-canvas"></canvas>
-
-
-<!-- ═══════════════════════════════════════════════════
-     NAV
-═══════════════════════════════════════════════════ -->
-<nav id="nav">
-  <div class="wrap nav-inner">
-    <a href="/#hero" class="nav-logo"><em>// </em>Arijeet Baruah</a>
-
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="/#skills">skills</a></li>
-        <li><a href="/#projects">projects</a></li>
-        <li><a href="/#about">about</a></li>
-        <li><a href="/#contact">contact</a></li>
-      </ul>
-
-      <!-- Theme toggle -->
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
-
-      <a href="#contact" class="nav-hire">Hire me</a>
-
-      <!-- Mobile hamburger -->
-      <div class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobile-menu">
-  <a href="/#skills">Skills</a>
-  <a href="/#projects">Projects</a>
-  <a href="/#about">About</a>
-  <a href="/#contact">Contact</a>
-</div>
+  {% include header.html %}
 
   {{ content }}
 
-  
-    <!-- ═══════════════════════════════════════════════════
-        FOOTER
-    ═══════════════════════════════════════════════════ -->
-    <footer>
-    <div class="wrap">
-        <div class="footer-inner">
-        <div class="footer-copy">© 2025 Arijeet Baruah.</div>
-        <ul class="footer-links">
-            <li><a href="https://github.com/{{site.data.social.github}}" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/{{site.data.social.linkedin}}" target="_blank">LinkedIn</a></li>
-            <li><a href="mailto:{{site.data.social.email}}">Email</a></li>
-        </ul>
-        <div class="footer-status">
-            <div class="status-dot"></div>Available for work
-        </div>
-        </div>
-    </div>
-    </footer>
+  {% include footer.html %}
 
-  <script src="/assets/js/main.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
