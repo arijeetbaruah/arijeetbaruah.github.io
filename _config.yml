@@ -22,13 +22,17 @@ title: Arijeet Baruah — Gameplay Programmer
 email: arijeetbaruah@gmail.com
 description: Portfolio of game developer Arijeet Baruah. Unity, C#, C++, tools and gameplay systems.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://arijeetbaruah.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  arijeetbaruah
 
 collections:
   projects:
     output: true
+
+author:
+  name: Arijeet Baruah
+  title: Gameplay Programmer
 
 # Build settings
 theme: minima
