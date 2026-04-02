@@ -164,7 +164,7 @@ title: Home
         <strong>full-time and contract game developer roles</strong>, remote-friendly.
       </p>
       <div class="about-cta">
-        <a href="assets/cv/arijeet-baruah-cv.pdf" class="btn btn-solid" download>↓ Download CV</a>
+        <a href="assets/cv/Arijeet_Baruah_Resume" class="btn btn-solid" download>↓ Download CV</a>
         <a href="https://github.com/arijeetbaruah" target="_blank" class="btn btn-outline">GitHub Profile ↗</a>
       </div>
     </div>
