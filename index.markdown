@@ -97,13 +97,17 @@ title: Home
 
     <div class="projects-grid">
     {% for project in site.projects %}
-        <div class="project-card reveal" data-type="{{project.category | downcase}}" data-delay="0">
+        <div class="project-card reveal{% if project.feature %} featured{% endif %}" data-type="{{project.category | downcase}}" data-delay="0">
             <div class="project-img-wrap">
                 <img class="project-img"
                     src="{{ project.image }}"
                     alt="{{ project.title }} screenshot"
                     loading="lazy" />
+                    {% if project.feature %}
+                    <span class="project-badge badge-featured">★ Featured</span>
+                    {% else %}
                     <span class="project-badge badge-{{project.category | downcase}}">{{project.category}}</span>
+                    {% endif %}
                 </div>
                 <div class="project-body">
                 <div class="project-top">

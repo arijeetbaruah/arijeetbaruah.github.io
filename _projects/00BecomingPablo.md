@@ -20,6 +20,7 @@ tags:
     - C#
     - Grand Strategy
     - Commercial
+feature: true
 ---
 <a href="/#projects" class="back-link">← All Projects</a>
 
