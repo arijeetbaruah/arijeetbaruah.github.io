@@ -7,16 +7,16 @@ skills:
   -
     name: Unreal
     description: Game Engine
-    points: 80
+    points: 40
     icon: <i class="fa-brands fa-unreal-engine"></i>
   -
     name: C#
-    description: Gameplay Scription
+    description: Gameplay Scripting
     points: 82
     icon: <i class="icon-custom icon-csharp"></i>
   -
     name: C++
-    description: Gameplay Scription / Engine-level
+    description: Gameplay Scripting / Engine-level
     points: 92
     icon: <i class="icon-custom icon-cpp"></i>
   -

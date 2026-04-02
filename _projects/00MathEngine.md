@@ -5,6 +5,7 @@ description: "Maths Engine is a Unity plugin that allows designers to visually c
 image: "https://raw.githubusercontent.com/arijeetbaruah/Maths-Engine/refs/heads/main/docs/images/social-preview.png"
 role: Programmer, Owner
 collection: portfolio
+type: Open-Source Plugin
 category: Plugin
 link:
     text: Documentation

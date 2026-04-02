@@ -5,6 +5,7 @@ description: "A rhythm game with Indian Songs"
 image: "https://play-lh.googleusercontent.com/jgzjyPMu8QKO4-7nr5pRn133pRqwIMC1EJkIVCdzAhGfEw-dXdwQRBitulTYBnH1uQ=w2560-h1440"
 collection: portfolio
 category: Game
+type: Commercial Title
 tags:
     - Unity3D
     - C#

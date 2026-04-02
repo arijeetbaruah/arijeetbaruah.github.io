@@ -8,6 +8,7 @@ link:
     text: View on Steam
     url: https://store.steampowered.com/app/3145440/Becoming_Pablo/
 collection: portfolio
+type: Commercial Title
 category: Game
 genre: Turn-Based Grand Strategy
 tech:

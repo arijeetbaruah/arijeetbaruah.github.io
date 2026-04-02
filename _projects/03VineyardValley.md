@@ -4,6 +4,7 @@ title: "Vineyard Valley"
 description: "Match 3 Game with hotel renovation"
 image: "https://play-lh.googleusercontent.com/gnSyCLansw_YNYyVNeLSj_J4LqDk_OGCWM7dC-dS4LKEFnMs5y0DbYCHknxtl_D-tQU=w2560-h1440"
 collection: portfolio
+type: Commercial Title
 category: Game
 tags:
     - Unity3D

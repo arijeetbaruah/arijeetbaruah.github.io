@@ -5,6 +5,7 @@ description: "Worked in a team of 5. My duties were to work in the integration o
 image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Nestl%C3%A9.svg/1280px-Nestl%C3%A9.svg.png"
 collection: portfolio
 category: Website
+type: Commercial Website
 tags:
     - GoLang
 role: backend Programmer

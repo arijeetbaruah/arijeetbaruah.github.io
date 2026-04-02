@@ -8,6 +8,7 @@
 
 /* ── Design Tokens ── */
 :root {
+  --red:        #ff008c;
   --green:        #00ff8c;
   --green-dim:    #00cc70;
   --green-glow:   rgba(0,255,140,0.12);
@@ -650,7 +651,7 @@ section { position: relative; z-index: 2; }
 }
 .badge-plugin {
   background: rgba(0,140,255,0.12);
-  color: var(--green);
+  color: var(--red);
   border: 1px solid var(--green-border);
 }
 .badge-website {

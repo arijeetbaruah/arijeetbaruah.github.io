@@ -4,6 +4,7 @@ title: "RPG Game"
 description: "RPG Game with multiple Weapons and Spells"
 image: "https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/refs/heads/master/assets/images/rpggame.png"
 collection: portfolio
+type: Personal Project
 category: Game
 tags:
     - Unity3D

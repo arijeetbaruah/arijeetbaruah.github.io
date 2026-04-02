@@ -5,6 +5,7 @@ description: "Open-Source ORM plugin for Unity3D"
 image: "https://github.com/arijeetbaruah/DataSmith/raw/main/docs/Image/Cover.jpg"
 role: Programmer, Owner
 collection: portfolio
+type: Open-Source Plugin
 category: Plugin
 link:
     text: Documentation

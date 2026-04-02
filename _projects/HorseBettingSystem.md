@@ -5,6 +5,7 @@ description: "Worked in a team of 300. My duties were to work with multiple sub-
 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxWMma4oY1KIQF4SyB_VoSCcjy9Gh19pW5A&s"
 collection: portfolio
 category: Website
+type: Commercial Website
 tags:
     - ReactJS
     - NodeJS
