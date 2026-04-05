@@ -1,29 +1,524 @@
 ---
+layout: null
+title: "404 — Page Not Found"
 permalink: /404.html
-layout: default
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<section id="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <h1>404</h1>
-
-      <p><strong>Page not found :(</strong></p>
-      <p>The requested page could not be found.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Arijeet Baruah</title>
+  <link rel="stylesheet" href="/assets/main.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--mono);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+ 
+    /* Scanlines */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent, transparent 2px,
+        rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+ 
+    .container {
+      width: 100%;
+      max-width: 640px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+ 
+    /* Header */
+    .error-header {
+      text-align: center;
+    }
+ 
+    .error-code {
+      font-family: var(--display);
+      font-size: clamp(80px, 18vw, 140px);
+      font-weight: 900;
+      color: var(--green);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      text-shadow: 0 0 40px rgba(0,255,140,0.3);
+      animation: flicker 6s ease-in-out infinite;
+    }
+ 
+    @keyframes flicker {
+      0%,95%,100% { opacity: 1; }
+      96%          { opacity: 0.4; }
+      97%          { opacity: 1; }
+      98%          { opacity: 0.2; }
+      99%          { opacity: 1; }
+    }
+ 
+    .error-msg {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+ 
+    /* Game wrapper */
+    .game-wrapper {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: var(--bg2);
+    }
+ 
+    .game-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      background: var(--bg3);
+      border-bottom: 1px solid var(--border);
+    }
+ 
+    .game-title {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--green);
+      text-transform: uppercase;
+    }
+ 
+    .game-score-wrap {
+      display: flex;
+      gap: 1.5rem;
+    }
+ 
+    .score-item {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+    }
+ 
+    .score-item span {
+      color: var(--green);
+      margin-left: 4px;
+    }
+ 
+    canvas {
+      display: block;
+      width: 100%;
+      image-rendering: pixelated;
+    }
+ 
+    .game-controls {
+      padding: 0.6rem 1rem;
+      background: var(--bg3);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+ 
+    .controls-hint {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+    }
+ 
+    .controls-hint kbd {
+      background: var(--bg4);
+      border: 1px solid var(--border);
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text);
+    }
+ 
+    .btn-restart {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: transparent;
+      border: 1px solid var(--green-border);
+      padding: 4px 14px;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+ 
+    .btn-restart:hover { background: var(--green-glow); }
+ 
+    /* Nav links */
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+ 
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      transition: color 0.2s;
+    }
+ 
+    .nav-links a:hover { color: var(--green); }
+ 
+    /* Mobile d-pad */
+    .dpad {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      margin-top: 0.5rem;
+    }
+ 
+    .dpad-row {
+      display: flex;
+      gap: 4px;
+    }
+ 
+    .dpad-btn {
+      width: 44px;
+      height: 44px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--green);
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      -webkit-user-select: none;
+      transition: background 0.1s;
+    }
+ 
+    .dpad-btn:active { background: var(--green-glow); }
+ 
+    @media (max-width: 540px) {
+      .dpad { display: flex; }
+      .controls-hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="container">
+ 
+    <div class="error-header">
+      <div class="error-code">404</div>
+      <div class="error-msg">// page not found — play while you're here</div>
     </div>
+ 
+    <div class="game-wrapper">
+      <div class="game-topbar">
+        <div class="game-title">snake.exe</div>
+        <div class="game-score-wrap">
+          <div class="score-item">score<span id="score">0</span></div>
+          <div class="score-item">best<span id="best">0</span></div>
+        </div>
+      </div>
+      <canvas id="game" width="640" height="400"></canvas>
+      <div class="game-controls">
+        <div class="controls-hint">
+          <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> move &nbsp;·&nbsp;
+          <kbd>space</kbd> pause
+        </div>
+        <button class="btn-restart" id="restartBtn">restart</button>
+      </div>
+    </div>
+ 
+    <!-- Mobile d-pad -->
+    <div class="dpad" id="dpad">
+      <div class="dpad-row">
+        <button class="dpad-btn" data-dir="UP">↑</button>
+      </div>
+      <div class="dpad-row">
+        <button class="dpad-btn" data-dir="LEFT">←</button>
+        <button class="dpad-btn" data-dir="DOWN">↓</button>
+        <button class="dpad-btn" data-dir="RIGHT">→</button>
+      </div>
+    </div>
+ 
+    <ul class="nav-links">
+      <li><a href="/">← back to home</a></li>
+      <li><a href="/#projects">projects</a></li>
+      <li><a href="/#contact">contact</a></li>
+    </ul>
+ 
   </div>
-</section>
+ 
+  <script>
+    const canvas  = document.getElementById('game');
+    const ctx     = canvas.getContext('2d');
+    const COLS    = 32;
+    const ROWS    = 20;
+    const CELL    = canvas.width / COLS;  // 20px
+ 
+    // colours — match portfolio vars via computed style
+    const cs      = getComputedStyle(document.documentElement);
+    const C_BG    = '#090b0e';
+    const C_BG2   = '#0d1016';
+    const C_BG3   = '#121720';
+    const C_GREEN = '#00ff8c';
+    const C_DIM   = '#7c9680';
+    const C_BORDER= 'rgba(255,255,255,0.07)';
+    const C_RED   = '#ff008c';
+    const C_AMBER = '#ffb347';
+ 
+    let snake, dir, nextDir, food, score, best, state, interval, tick;
+ 
+    function init() {
+      snake   = [{x:16,y:10},{x:15,y:10},{x:14,y:10}];
+      dir     = {x:1,y:0};
+      nextDir = {x:1,y:0};
+      food    = spawnFood();
+      score   = 0;
+      state   = 'READY'; // READY | RUNNING | PAUSED | DEAD
+      best    = parseInt(localStorage.getItem('snake404best')||'0');
+      updateHUD();
+      draw();
+    }
+ 
+    function spawnFood() {
+      let pos;
+      do {
+        pos = {
+          x: Math.floor(Math.random() * COLS),
+          y: Math.floor(Math.random() * ROWS)
+        };
+      } while (snake.some(s => s.x===pos.x && s.y===pos.y));
+      return pos;
+    }
+ 
+    function start() {
+      if (interval) clearInterval(interval);
+      state    = 'RUNNING';
+      interval = setInterval(step, 120);
+    }
+ 
+    function step() {
+      dir = {...nextDir};
+      const head = {x: snake[0].x + dir.x, y: snake[0].y + dir.y};
+ 
+      // Wall collision
+      if (head.x < 0 || head.x >= COLS || head.y < 0 || head.y >= ROWS) {
+        return die();
+      }
+      // Self collision
+      if (snake.some(s => s.x===head.x && s.y===head.y)) {
+        return die();
+      }
+ 
+      snake.unshift(head);
+ 
+      if (head.x===food.x && head.y===food.y) {
+        score++;
+        if (score > best) {
+          best = score;
+          localStorage.setItem('snake404best', best);
+        }
+        food = spawnFood();
+        // Speed up slightly every 5 points
+        if (score % 5 === 0) {
+          clearInterval(interval);
+          interval = setInterval(step, Math.max(60, 120 - score * 3));
+        }
+      } else {
+        snake.pop();
+      }
+ 
+      updateHUD();
+      draw();
+    }
+ 
+    function die() {
+      clearInterval(interval);
+      state = 'DEAD';
+      draw();
+    }
+ 
+    function updateHUD() {
+      document.getElementById('score').textContent = score;
+      document.getElementById('best').textContent  = best;
+    }
+ 
+    function draw() {
+      // Background
+      ctx.fillStyle = C_BG2;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+ 
+      // Grid dots
+      ctx.fillStyle = C_BORDER;
+      for (let x = 0; x < COLS; x++) {
+        for (let y = 0; y < ROWS; y++) {
+          ctx.fillRect(x * CELL + CELL/2 - 0.5, y * CELL + CELL/2 - 0.5, 1, 1);
+        }
+      }
+ 
+      // Food — pulsing pixel
+      const pulse = 0.6 + 0.4 * Math.sin(Date.now() / 300);
+      ctx.shadowBlur  = 12 * pulse;
+      ctx.shadowColor = C_RED;
+      ctx.fillStyle   = C_RED;
+      ctx.fillRect(food.x * CELL + 3, food.y * CELL + 3, CELL - 6, CELL - 6);
+      ctx.shadowBlur  = 0;
+ 
+      // Snake
+      snake.forEach((seg, i) => {
+        const isHead = i === 0;
+        const alpha  = isHead ? 1 : Math.max(0.35, 1 - i * 0.04);
+ 
+        if (isHead) {
+          ctx.shadowBlur  = 8;
+          ctx.shadowColor = C_GREEN;
+        }
+ 
+        ctx.fillStyle = isHead
+          ? C_GREEN
+          : `rgba(0,255,140,${alpha})`;
+ 
+        const pad = isHead ? 1 : 2;
+        ctx.fillRect(
+          seg.x * CELL + pad,
+          seg.y * CELL + pad,
+          CELL - pad * 2,
+          CELL - pad * 2
+        );
+        ctx.shadowBlur = 0;
+      });
+ 
+      // Overlays
+      if (state === 'READY') {
+        drawOverlay('SNAKE.EXE', 'press any key to start', C_GREEN);
+      } else if (state === 'PAUSED') {
+        drawOverlay('PAUSED', 'press space to resume', C_AMBER);
+      } else if (state === 'DEAD') {
+        drawOverlay(
+          'GAME OVER',
+          `score: ${score}  ·  press space or restart`,
+          C_RED
+        );
+      }
+    }
+ 
+    function drawOverlay(title, sub, color) {
+      // Dim
+      ctx.fillStyle = 'rgba(9,11,14,0.82)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+ 
+      // Box
+      const bw = 320, bh = 100;
+      const bx = (canvas.width - bw) / 2;
+      const by = (canvas.height - bh) / 2;
+      ctx.strokeStyle = color;
+      ctx.lineWidth   = 1;
+      ctx.strokeRect(bx, by, bw, bh);
+      ctx.fillStyle = C_BG2;
+      ctx.fillRect(bx + 1, by + 1, bw - 2, bh - 2);
+ 
+      // Title
+      ctx.fillStyle   = color;
+      ctx.font        = 'bold 28px "Barlow Condensed", sans-serif';
+      ctx.textAlign   = 'center';
+      ctx.fillText(title, canvas.width / 2, by + 42);
+ 
+      // Sub
+      ctx.fillStyle = C_DIM;
+      ctx.font      = '11px "Share Tech Mono", monospace';
+      ctx.fillText(sub, canvas.width / 2, by + 68);
+ 
+      ctx.textAlign = 'left';
+    }
+ 
+    // ── Input ──────────────────────────────────────────────
+    const DIRS = {
+      ArrowUp:    {x:0,  y:-1},
+      ArrowDown:  {x:0,  y:1},
+      ArrowLeft:  {x:-1, y:0},
+      ArrowRight: {x:1,  y:0},
+      w:          {x:0,  y:-1},
+      s:          {x:0,  y:1},
+      a:          {x:-1, y:0},
+      d:          {x:1,  y:0},
+    };
+ 
+    document.addEventListener('keydown', e => {
+      if (e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        if (state === 'READY' || state === 'DEAD') {
+          init(); start();
+        } else if (state === 'RUNNING') {
+          clearInterval(interval);
+          state = 'PAUSED';
+          draw();
+        } else if (state === 'PAUSED') {
+          start();
+        }
+        return;
+      }
+ 
+      if (state === 'READY') { init(); start(); return; }
+      if (state !== 'RUNNING') return;
+ 
+      const d = DIRS[e.key];
+      if (!d) return;
+      e.preventDefault();
+ 
+      // Prevent reversing
+      if (d.x !== 0 && dir.x !== 0) return;
+      if (d.y !== 0 && dir.y !== 0) return;
+      nextDir = d;
+    });
+ 
+    // Mobile d-pad
+    document.querySelectorAll('.dpad-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const map = {UP:{x:0,y:-1}, DOWN:{x:0,y:1}, LEFT:{x:-1,y:0}, RIGHT:{x:1,y:0}};
+        const d   = map[btn.dataset.dir];
+        if (!d) return;
+ 
+        if (state === 'READY' || state === 'DEAD') { init(); start(); }
+        if (state !== 'RUNNING') return;
+        if (d.x !== 0 && dir.x !== 0) return;
+        if (d.y !== 0 && dir.y !== 0) return;
+        nextDir = d;
+      });
+    });
+ 
+    document.getElementById('restartBtn').addEventListener('click', () => {
+      init(); start();
+    });
+ 
+    // Pulse food animation
+    setInterval(() => {
+      if (state === 'RUNNING') draw();
+    }, 50);
+ 
+    init();
+  </script>
+</body>
+</html>
+ 
