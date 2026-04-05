@@ -1,0 +1,109 @@
+// ============================================================
+//   _variables.scss — design tokens & theme vars
+// ============================================================
+
+// ── Google Fonts ─────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@700;900&display=swap');
+
+// ── SCSS colour primitives (used to build CSS vars) ──────
+$green-dark:    #00ff8c;
+$green-light:   #00994a;
+$amber:         #ffb347;
+$red:           #ff008c;
+
+// ── Breakpoints ──────────────────────────────────────────
+$bp-md:  900px;
+$bp-sm:  768px;
+$bp-xs:  640px;
+
+// ── Transitions ──────────────────────────────────────────
+$t-fast:   0.2s ease;
+$t-base:   0.3s ease;
+$t-slow:   0.65s ease;
+
+// ── Z-index scale ────────────────────────────────────────
+$z-bg:     0;
+$z-base:   2;
+$z-nav:    500;
+$z-overlay: 9999;
+
+// ── Spacing scale ────────────────────────────────────────
+$gap-xs:   0.6rem;
+$gap-sm:   1rem;
+$gap-md:   1.75rem;
+$gap-lg:   2.5rem;
+$gap-xl:   5rem;
+
+// ── CSS custom properties (dark theme default) ───────────
+:root {
+  --red:          #{$red};
+  --green:        #{$green-dark};
+  --green-dim:    #00cc70;
+  --green-glow:   rgba(0, 255, 140, 0.12);
+  --green-border: rgba(0, 255, 140, 0.25);
+  --amber:        #{$amber};
+
+  // backgrounds
+  --bg:           #090b0e;
+  --bg2:          #0d1016;
+  --bg3:          #121720;
+  --bg4:          #1a2030;
+  --surface:      rgba(255, 255, 255, 0.03);
+
+  // borders
+  --border:       rgba(255, 255, 255, 0.07);
+  --border-hi:    rgba(0, 255, 140, 0.25);
+
+  // text
+  --text:         #a8b8a0;
+  --text-hi:      #deecd4;
+  --text-dim:     #7c9680;
+  --text-inv:     #090b0e;
+
+  // misc
+  --shadow:       rgba(0, 0, 0, 0.6);
+  --tag-bg:       rgba(255, 255, 255, 0.05);
+  --tag-color:    #607060;
+  --card-bg:      #0d1016;
+  --card-border:  rgba(255, 255, 255, 0.07);
+  --nav-bg:       rgba(9, 11, 14, 0.88);
+  --scanline:     rgba(0, 0, 0, 0.04);
+  --grid-line:    rgba(0, 255, 140, 0.025);
+
+  // typography
+  --mono:         'Share Tech Mono', monospace;
+  --sans:         'Barlow', sans-serif;
+  --display:      'Barlow Condensed', sans-serif;
+
+  // radii
+  --r-sm: 2px;
+  --r-md: 4px;
+  --r-lg: 8px;
+}
+
+// ── Light theme overrides ────────────────────────────────
+[data-theme="light"] {
+  --bg:           #f4f6f0;
+  --bg2:          #eceee8;
+  --bg3:          #e4e7de;
+  --bg4:          #dce0d4;
+  --surface:      rgba(0, 0, 0, 0.02);
+  --border:       rgba(0, 0, 0, 0.08);
+  --border-hi:    rgba(0, 150, 80, 0.35);
+  --text:         #3a4838;
+  --text-hi:      #1a2618;
+  --text-dim:     #90c197;
+  --text-inv:     #ffffff;
+  --shadow:       rgba(0, 0, 0, 0.12);
+  --tag-bg:       rgba(0, 0, 0, 0.05);
+  --tag-color:    #5a6e58;
+  --card-bg:      #ffffff;
+  --card-border:  rgba(0, 0, 0, 0.08);
+  --nav-bg:       rgba(244, 246, 240, 0.92);
+  --scanline:     transparent;
+  --grid-line:    rgba(0, 120, 60, 0.04);
+  --green:        #{$green-light};
+  --green-dim:    #007a3c;
+  --green-glow:   rgba(0, 150, 74, 0.08);
+  --green-border: rgba(0, 150, 74, 0.25);
+}

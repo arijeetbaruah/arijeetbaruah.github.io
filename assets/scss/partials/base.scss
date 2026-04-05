@@ -1,0 +1,179 @@
+// ============================================================
+//   _base.scss — reset, body, global elements
+// ============================================================
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.35s ease, color 0.35s ease;
+
+  // Scanlines overlay
+  &::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      var(--scanline) 2px,
+      var(--scanline) 4px
+    );
+    pointer-events: none;
+    z-index: $z-overlay;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  z-index: $z-base;
+}
+
+// ── Canvas background ────────────────────────────────────
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: $z-bg;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+// ── Layout helpers ───────────────────────────────────────
+.wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @include respond($bp-xs) {
+    padding: 0 1.25rem;
+  }
+}
+
+.section-pad {
+  padding: 7rem 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.section-num {
+  @include mono-label(11px, 0.15em);
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+.section-title {
+  @include display-heading(clamp(28px, 5vw, 52px));
+  flex-shrink: 0;
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+// ── Scroll reveal animations ─────────────────────────────
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity $t-slow, transform $t-slow;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+// ── Buttons ──────────────────────────────────────────────
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  @include mono-label(12px, 0.12em);
+  padding: 13px 28px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: transform 0.15s, opacity $t-fast, background $t-fast;
+  border: none;
+  white-space: nowrap;
+
+  &:hover  { transform: translateY(-2px); }
+  &:active { transform: translateY(0); }
+}
+
+.btn-solid {
+  background: var(--green);
+  color: var(--text-inv);
+
+  &:hover { opacity: 0.88; }
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green-border);
+
+  &:hover { background: var(--green-glow); }
+}
+
+// ── Tags / pills ─────────────────────────────────────────
+.tag {
+  @include mono-label(10px, 0);
+  color: var(--tag-color);
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: var(--r-sm);
+}
+
+// ── Custom icons ─────────────────────────────────────────
+.icon-custom {
+  color: var(--green-dim);
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+
+  svg { width: 100%; height: 100%; }
+}
+
+.icon-csharp  { background-image: url('/assets/images/CSharp.svg'); }
+.icon-cpp     { background-image: url('/assets/images/CPP.svg'); }
+.icon-opengl  { background-image: url('/assets/images/OpenGl.svg'); }

@@ -35,10 +35,17 @@ author:
   title: Gameplay Programmer
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+sass:
+  sass_dir: assets/scss
+  load_paths:
+    - assets/scss
+  style: compressed
+  quiet_deps: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,0 +1,130 @@
+// ============================================================
+//   _mixins.scss — reusable patterns
+// ============================================================
+
+// ── Responsive breakpoints ───────────────────────────────
+@mixin respond($bp) {
+  @media (max-width: $bp) { @content; }
+}
+
+// ── Mono label (used heavily for eyebrows, keys, indices) ─
+@mixin mono-label($size: 11px, $spacing: 0.12em) {
+  font-family: var(--mono);
+  font-size: $size;
+  letter-spacing: $spacing;
+  text-transform: uppercase;
+}
+
+// ── Display heading ──────────────────────────────────────
+@mixin display-heading($size: 22px) {
+  font-family: var(--display);
+  font-size: $size;
+  font-weight: 900;
+  color: var(--text-hi);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+// ── Green accent bar (left-side hover reveal) ────────────
+// Used on skill-card, project-card, system-card
+@mixin accent-bar-left {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background: var(--green);
+    transition: height 0.3s ease;
+  }
+
+  &:hover::after {
+    height: 100%;
+  }
+}
+
+// ── Green accent bar (bottom hover reveal) ───────────────
+// Used on stat-cell
+@mixin accent-bar-bottom {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--green);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+// ── Top accent bar (used on minigame-card, system-card) ──
+@mixin accent-bar-top {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--green);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+// ── Card base (used by project-card, skill-card, etc.) ───
+@mixin card-base($bg: var(--card-bg)) {
+  background: $bg;
+  transition: background $t-fast;
+
+  &:hover {
+    background: var(--bg3);
+  }
+}
+
+// ── Grid with 1px gap (mosaic grid pattern) ──────────────
+@mixin mosaic-grid($min-col: 300px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min-col, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+// ── Flex row with mono links ──────────────────────────────
+@mixin mono-link($size: 11px) {
+  @include mono-label($size);
+  color: var(--text-dim);
+  transition: color $t-fast;
+
+  &:hover {
+    color: var(--green);
+  }
+}
+
+// ── Clamp font size ──────────────────────────────────────
+@mixin fluid-type($min, $vw, $max) {
+  font-size: clamp(#{$min}, #{$vw}, #{$max});
+}

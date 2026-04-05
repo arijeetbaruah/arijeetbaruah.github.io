@@ -1,0 +1,153 @@
+// ============================================================
+//   _nav.scss
+// ============================================================
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-nav;
+  height: 56px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: background $t-base, border-color $t-base;
+}
+
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  @include mono-label(13px);
+  color: var(--green);
+  text-transform: none;
+  letter-spacing: 0;
+
+  em {
+    color: var(--text-dim);
+    font-style: normal;
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+
+  a {
+    @include mono-link(11px);
+    letter-spacing: 0.12em;
+  }
+
+  @include respond($bp-xs) {
+    display: none;
+  }
+}
+
+// ── Theme toggle ─────────────────────────────────────────
+.theme-toggle {
+  width: 36px;
+  height: 20px;
+  background: var(--bg4);
+  border: 1px solid var(--border-hi);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background $t-base;
+  flex-shrink: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--green);
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform $t-base, background $t-base;
+  }
+
+  [data-theme="light"] &::after {
+    transform: translateX(16px);
+  }
+}
+
+// ── Hire me button ───────────────────────────────────────
+.nav-hire {
+  @include mono-label(11px, 0.12em);
+  color: var(--green);
+  border: 1px solid var(--green-border);
+  padding: 6px 16px;
+  border-radius: var(--r-sm);
+  transition: background $t-fast;
+
+  &:hover { background: var(--green-glow); }
+
+  @include respond($bp-xs) {
+    display: none;
+  }
+}
+
+// ── Hamburger ────────────────────────────────────────────
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--text);
+    transition: all $t-base;
+  }
+
+  &.open {
+    span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  }
+
+  @include respond($bp-xs) {
+    display: flex;
+  }
+}
+
+// ── Mobile menu ──────────────────────────────────────────
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  z-index: $z-nav - 1;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  a {
+    @include mono-label(13px, 0.12em);
+    color: var(--text-dim);
+  }
+
+  &.open { display: flex; }
+}
