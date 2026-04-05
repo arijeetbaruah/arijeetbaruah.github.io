@@ -50,6 +50,37 @@ title: Home
   </div>
 </section>
 
+<section id="stats">
+  <div class="wrap">
+    <div class="stats-row reveal">
+      <div class="stat-cell">
+        <div class="stat-num" data-count="5" data-suffix="+">5+</div>
+        <div class="stat-label">// years experience</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" data-count="8" data-suffix="+">8+</div>
+        <div class="stat-label">// commercial titles</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" data-count="2">2</div>
+        <div class="stat-label">// studios worked with</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" data-count="300">300</div>
+        <div class="stat-label">// largest team size</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" data-count="2">2</div>
+        <div class="stat-label">// unity plugins authored</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">&#x221e;</div>
+        <div class="stat-label">// bugs squashed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════════════════════
      SKILLS
 ═══════════════════════════════════════════════════ -->

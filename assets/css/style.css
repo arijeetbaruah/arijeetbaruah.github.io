@@ -442,7 +442,8 @@ section { position: relative; z-index: 2; }
 }
 .stats-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: 0;
   border: 1px solid var(--border);
 }
