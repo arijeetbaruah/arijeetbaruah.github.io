@@ -1,0 +1,220 @@
+---
+layout: default
+---
+
+<article class="post-wrap">
+  <div class="wrap">
+
+    <a href="/blog" class="back-link">← all posts</a>
+
+    <header class="post-header">
+      <div class="post-meta-top">
+        <span class="post-category">{{ page.category | default: "devlog" }}</span>
+        <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+      </div>
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="post-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      {% if page.tags %}
+      <div class="post-tags">
+        {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </header>
+
+    <div class="post-body">
+      {{ content }}
+    </div>
+
+    <footer class="post-footer">
+      <a href="/blog" class="back-link">← back to blog</a>
+      <a href="/#contact" class="back-link">get in touch →</a>
+    </footer>
+
+  </div>
+</article>
+
+<style>
+.post-wrap {
+  padding: 7rem 0 5rem;
+  min-height: 100vh;
+}
+
+.post-header {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.post-category {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green);
+  border: 1px solid var(--green-border);
+  padding: 3px 10px;
+  border-radius: var(--r-sm);
+}
+
+.post-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.post-title {
+  font-family: var(--display);
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 900;
+  color: var(--text-hi);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  margin-bottom: 1.25rem;
+}
+
+.post-subtitle {
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 640px;
+  border-left: 2px solid var(--green-border);
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Post body typography */
+.post-body {
+  max-width: 720px;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+.post-body h2 {
+  font-family: var(--display);
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 900;
+  color: var(--text-hi);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 3rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.post-body h3 {
+  font-family: var(--display);
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 900;
+  color: var(--text-hi);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 2rem 0 0.75rem;
+}
+
+.post-body p {
+  margin-bottom: 1.5rem;
+}
+
+.post-body strong {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.post-body em {
+  color: var(--text-hi);
+  font-style: italic;
+}
+
+.post-body a {
+  color: var(--green);
+  border-bottom: 1px solid var(--green-border);
+  transition: border-color 0.2s;
+}
+
+.post-body a:hover {
+  border-color: var(--green);
+}
+
+.post-body code {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--green);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 1px 6px;
+  border-radius: var(--r-sm);
+}
+
+.post-body pre {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  padding: 1.5rem 2rem;
+  overflow-x: auto;
+  margin: 1.5rem 0 2rem;
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+}
+
+.post-body pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  color: var(--text-hi);
+  line-height: 1.7;
+}
+
+.post-body ul,
+.post-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-body li {
+  margin-bottom: 0.5rem;
+}
+
+.post-body blockquote {
+  border-left: 2px solid var(--green-border);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.post-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3rem 0;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  max-width: 720px;
+}
+</style>
