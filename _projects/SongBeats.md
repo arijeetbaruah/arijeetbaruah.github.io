@@ -2,7 +2,7 @@
 layout: game
 title: "Song Beat"
 description: "Song Beat is a mobile tap/lane-based rhythm game. I joined mid-development, contributing bug fixes alongside two significant engineering systems — an offline mode caching layer and a reflection-based REST API response parser."
-image: "https://play-lh.googleusercontent.com/jgzjyPMu8QKO4-7nr5pRn133pRqwIMC1EJkIVCdzAhGfEw-dXdwQRBitulTYBnH1uQ=w2560-h1440"
+image: "/assets/images/songbeat.png"
 role: Gameplay Programmer
 collection: portfolio
 type: Commercial Title

@@ -102,7 +102,11 @@ permalink: /blog/
 .pag-btn--active { color: var(--green); border-color: var(--green-border); background: var(--green-glow); cursor: default; }
 .pag-btn--disabled { opacity: 0.3; cursor: default; }
 </style>
-
+<!--
+{% for post in site.posts %}
+{{ post.title }}
+{% endfor %}
+-->
 <script>
 const posts = [
 {% for post in site.posts %}

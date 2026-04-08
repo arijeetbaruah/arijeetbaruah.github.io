@@ -2,7 +2,7 @@
 layout: game
 title: "Free Flow Puzzle"
 description: "Recreated Free Flow Puzzle game using Unity3D"
-image: "https://raw.githubusercontent.com/arijeetbaruah/arijeetbaruah.github.io/refs/heads/master/assets/images/FreeFlowPuzzle.png"
+image: "/assets/images/FreeFlowPuzzle.png"
 collection: portfolio
 type: Commercial Title
 category: Game

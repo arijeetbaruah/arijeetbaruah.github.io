@@ -2,7 +2,7 @@
 layout: game
 title: "Sony Atlas"
 description: "Sony Atlas is a music analytics platform used by Sony Music stakeholders to analyse trends and make investment decisions. Built solo at Webonise Labs using Symfony 3."
-image: "https://www.sme-atlas.com/images/header/logo.png?3"
+image: "/assets/images/sonyatlas.png"
 role: Solo Developer
 link:
     text: Visit Site

@@ -2,7 +2,7 @@
 layout: game
 title: "Becoming Pablo"
 description: "Becoming Pablo is a turn-based, Grand-Strategy, Steam title where I worked as a gameplay programmer, focusing on building scalable systems and improving the overall player experience."
-image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3145440/70abd15356e76ffcfb8bae216cbbd96fe42d1b19/header.jpg?t=1773327932"
+image: assets/images/becomingPablo.jpg
 role: Gameplay Programmer
 link:
     text: View on Steam
