@@ -45,6 +45,18 @@ Each saved entry stores the full request (endpoint, method, parameters) and the 
 
 So each API endpoint is configured with a list of **important variables** — parameters that must match for a cached response to be considered relevant at all.
 
+This configuration lives in a ScriptableObject:
+
+```csharp
+[CreateAssetMenu(menuName = "SongBeats/API Config")]
+public class SongRequestConfig
+    : RESTRequestConfig<SongRequestConfig, SongRequest, SongResponse>
+{
+    // important variables and score weights declared here
+    // via attributes on TRequest fields
+}
+```
+
 Designers and programmers can inspect and adjust the important variable list per endpoint without touching code.
 
 ### Phase 2 — Matching
@@ -105,7 +117,7 @@ This approach handles the reality that cached entries are never a perfect match 
 
 Matching works well for read requests — fetching song data, loading beat maps, getting configuration. But some requests genuinely can't be answered by replaying a saved response. Score submission is the clearest example: the player just performed a run with specific accuracy numbers, combo streaks, and timing data. There's no cached response that corresponds to *this exact performance*.
 
-For these cases, each `ApiEndpointConfig` can reference a **custom response generator** — a class that receives the incoming request and produces a valid response from scratch:
+For these cases, each `RESTRequestConfig` can reference a **custom response generator** — a class that receives the incoming request and produces a valid response from scratch:
 
 ```csharp
 public abstract class OfflineResponseGenerator : ScriptableObject
